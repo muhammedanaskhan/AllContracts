@@ -44,18 +44,18 @@ contract TaskManager{
         _tasks[_taskIndex].status = status;
     }
 
-    funtion getTotalTasksCount()external view returns (uint256){
+    function getTotalTasksCount()external view returns (uint256){
         return _tasks.length;
     }
 
-    function getRecentThreeTasks()external view returns (memory Task[] ){
+    function getRecentThreeTasks()external view returns (Task[] memory ){
         uint256 totalTasks = _tasks.length;
-        uint256 count = totalTasks < 3 totalTasks : 3;
+        uint256 count = totalTasks < 3 ? totalTasks : 3;
 
         Task[] memory recentTasks = new Task[](count);
 
         for(uint256 i = 0; i < count; i++ ){
-            recentTasks[i] = _tasks[totalTasks - count -i]; // last 3 tasks
+            recentTasks[i] = _tasks[totalTasks - count + i]; // last 3 tasks
         }  
 
         return recentTasks;
