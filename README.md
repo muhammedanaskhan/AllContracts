@@ -7,3 +7,9 @@
 - Add tasks of user in the list with a min eth requirement, update the tasks' status, get total tasks
 - Get latest 3 tasks.
 
+## Polling Contract - 
+- functionalities - addPoll, voteToPoll, getResults.
+- events - on addPoll, on voteToPoll.
+- mappings - hasVoted.
+- modifiers - checkIfAlreadyVoted.
+
