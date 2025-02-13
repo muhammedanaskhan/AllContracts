@@ -22,4 +22,4 @@ describe("SimpleStorage Contract", function () {
         })
     })
 
-})  
+}) 
